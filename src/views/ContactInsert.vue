@@ -37,7 +37,7 @@ export default {
 
 <template>
   <div v-if="contact" class="page">
-    <h4>Them moi lien he</h4>
+    <h4>Them lien he moi</h4>
     <ContactForm :contact="contact" @submit:contact="insertContact" />
     <p>{{ message }}</p>
   </div>
