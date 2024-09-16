@@ -12,7 +12,6 @@ export default {
   props: {
     contact: {
       type: Object,
-      required: true,
     },
   },
   data() {
@@ -31,7 +30,7 @@ export default {
         .string()
         .matches(
           /((09|03|07|08|05)+([0-9]{8})\b)/g,
-          "So dien thoai khong hop le"
+          "So dien thoai khong hop le."
         ),
     });
     return {

@@ -35,8 +35,11 @@ export default {
 
     async updateContact(data) {
       try {
+        if (!data) {
+          throw new Error("Data không được cung cấp");
+        }
         await contactService.update(this.contact._id, data);
-        alert("Lien he duoc cap nhat thanh cong.");
+        alert("Lien he duoc cap nhat thanh cong. ");
         this.$router.push({ name: "contactbook" });
       } catch (error) {
         console.log(error);
